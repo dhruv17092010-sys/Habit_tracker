@@ -128,6 +128,94 @@ button{ font-family:inherit; }
 .law-card h4{ font-family:'Fraunces',serif; font-size:15px; margin:3px 0 4px; }
 .law-card p{ font-size:12px; color:var(--ink-soft); margin:0; line-height:1.5; }
 
+/* ---------- HOME / BRANDING SCREEN ---------- */
+.home-hero{
+  display:flex; align-items:flex-start; justify-content:space-between; gap:24px; flex-wrap:wrap;
+  background:var(--card); border:1px solid var(--line-strong); border-radius:16px;
+  padding:26px 30px; margin-bottom:28px; box-shadow:var(--shadow-sm);
+}
+.home-brand{ display:flex; align-items:center; gap:16px; min-width:0; }
+.home-logo-img{ width:52px; height:52px; border-radius:14px; object-fit:cover; flex-shrink:0; display:block; }
+.home-logo-fallback{
+  display:none; width:52px; height:52px; border-radius:14px; flex-shrink:0;
+  background:linear-gradient(135deg, var(--ink), #3B6E8F); color:var(--white);
+  align-items:center; justify-content:center; font-size:24px; box-shadow:var(--shadow-sm);
+}
+.home-eyebrow{ font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--amber-deep); font-weight:700; }
+.home-title{ font-size:28px; font-weight:600; letter-spacing:-0.01em; margin:2px 0 4px; }
+.home-tagline{ font-size:13px; color:var(--ink-soft); font-style:italic; }
+.home-hero-actions{ display:flex; flex-direction:column; align-items:flex-end; gap:10px; flex-shrink:0; }
+.home-cta{ font-size:14.5px; padding:12px 20px; box-shadow:var(--shadow-sm); }
+.home-explore{
+  font-size:12.5px; color:var(--ink-soft); text-decoration:none; border:1px solid var(--line-strong);
+  border-radius:var(--radius-sm); padding:8px 14px; background:var(--white);
+}
+.home-explore:hover{ color:var(--ink); border-color:var(--line-strong); }
+
+.home-carousel-section{ margin-bottom:30px; }
+.home-carousel-heading{ display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; }
+.home-carousel-heading h2{ font-size:19px; font-weight:600; }
+.carousel-arrows{ display:flex; gap:6px; }
+.carousel-arrow{
+  width:30px; height:30px; border-radius:50%; border:1px solid var(--line-strong); background:var(--white);
+  cursor:pointer; font-size:16px; line-height:1; display:flex; align-items:center; justify-content:center; color:var(--ink);
+}
+.carousel-arrow:hover{ background:var(--paper-deep); }
+
+.carousel-viewport{ overflow:hidden; border-radius:16px; cursor:grab; touch-action:pan-y; user-select:none; }
+.carousel-viewport:active{ cursor:grabbing; }
+.carousel-track{ display:flex; }
+.carousel-card{
+  flex:0 0 100%; max-width:100%; box-sizing:border-box;
+  background:var(--card); border:1px solid var(--line-strong); border-radius:16px;
+  padding:22px 24px; cursor:pointer; min-height:168px; display:flex; flex-direction:column; justify-content:space-between; gap:14px;
+}
+.home-card-top{ display:flex; align-items:center; gap:12px; }
+.home-card-icon{ width:40px; height:40px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:19px; flex-shrink:0; box-shadow:inset 0 0 0 1px rgba(0,0,0,0.08); }
+.home-card-name{ font-family:'Fraunces',serif; font-size:18px; font-weight:600; flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.home-card-status{ font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; padding:4px 10px; border-radius:20px; flex-shrink:0; }
+.home-card-status.complete{ background:var(--amber-tint); color:var(--amber-deep); }
+.home-card-status.partial{ background:var(--sage-tint); color:var(--sage); }
+.home-card-status.pending{ background:var(--paper-deep); color:var(--ink-soft); }
+.home-card-status.rest{ background:var(--line); color:var(--ink-faint); }
+.home-card-metrics{ display:flex; gap:22px; }
+.home-card-metric-num{ font-family:'Fraunces',serif; font-size:24px; font-weight:600; line-height:1; }
+.home-card-metric-lbl{ font-size:10.5px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.06em; margin-top:4px; }
+.home-card-milestone{ font-size:11.5px; color:var(--ink-soft); }
+.home-card-milestone-label{ font-weight:600; color:var(--ink); margin-bottom:6px; font-size:12.5px; }
+.home-card-milestone-bar{ height:7px; background:var(--paper-deep); border-radius:5px; overflow:hidden; margin-bottom:5px; }
+.home-card-milestone-fill{ height:100%; background:linear-gradient(90deg, var(--sage), var(--amber)); border-radius:5px; min-width:2px; }
+.home-card-milestone-meta{ font-family:'IBM Plex Mono',monospace; font-size:11px; }
+.home-card-milestone-empty a{ color:var(--ink); font-weight:600; cursor:pointer; text-decoration:underline; }
+
+.home-onboard-card{ align-items:center; text-align:center; padding:34px 26px; cursor:default; }
+.home-onboard-icon{ font-size:36px; margin-bottom:4px; }
+.home-onboard-card h3{ font-family:'Fraunces',serif; font-size:20px; margin-bottom:4px; }
+.home-onboard-card p{ font-size:13px; color:var(--ink-soft); line-height:1.55; max-width:380px; margin:0 auto 6px; }
+
+.carousel-dots{ display:flex; justify-content:center; gap:7px; margin-top:14px; }
+.carousel-dot{ width:8px; height:8px; border-radius:50%; border:none; background:var(--line-strong); cursor:pointer; padding:0; }
+.carousel-dot.active{ background:var(--ink); width:20px; border-radius:5px; transition:width .2s ease; }
+
+.home-laws{ margin-top:6px; }
+.home-laws-title{ font-size:11px; text-transform:uppercase; letter-spacing:0.1em; color:var(--amber-deep); font-weight:700; margin-bottom:12px; }
+
+.setup-modal{ max-width:640px; }
+.setup-modal .form-card{ padding:0; border:none; background:transparent; }
+
+@media (max-width: 880px){
+  .home-hero{ flex-direction:column; align-items:stretch; padding:20px; }
+  .home-hero-actions{ align-items:stretch; }
+  .home-hero-actions .btn, .home-explore{ text-align:center; }
+  .home-logo-img, .home-logo-fallback{ width:44px; height:44px; }
+  .home-title{ font-size:23px; }
+}
+@media (max-width: 560px){
+  .carousel-card{ padding:18px 16px; min-height:150px; }
+  .home-card-metric-num{ font-size:20px; }
+  .home-card-name{ font-size:16px; }
+}
+
 /* Habit header */
 .habit-header{
   display:flex; justify-content:space-between; align-items:flex-start; gap:20px;
@@ -439,12 +527,13 @@ select.chart-select{ font-family:'IBM Plex Mono',monospace; font-size:11.5px; pa
 <div class="app">
   <aside class="sidebar" id="sidebar">
     <button class="sidebar-close" id="sidebarCloseBtn" onclick="closeSidebar()" aria-label="Close menu">✕</button>
-    <div class="brand">
+    <div class="brand" onclick="goHome();" style="cursor:pointer;">
       <div class="eyebrow">Habit Builder</div>
       <h1>Atomic Ledger</h1>
       <div class="tag">Small actions, logged daily. Built on the four laws of behavior change.</div>
     </div>
-    <button class="btn btn-primary btn-block new-habit-btn" onclick="startNewHabit(); closeSidebar();">+ New habit</button>
+    <button class="btn btn-ghost btn-block" style="margin-bottom:8px; justify-content:flex-start;" onclick="goHome();">🏠 Home</button>
+    <button class="btn btn-primary btn-block new-habit-btn" onclick="openCreateHabitModal(); closeSidebar();">+ New habit</button>
     <ul class="habit-list" id="habitList"></ul>
     <div class="sidebar-footer">
       <div class="storage-pill" id="storagePill"></div>
@@ -460,6 +549,7 @@ select.chart-select{ font-family:'IBM Plex Mono',monospace; font-size:11.5px; pa
 </div>
 
 <div id="modalRoot"></div>
+<div id="setupModalRoot"></div>
 <div id="celebrationRoot"></div>
 
 <script>
@@ -557,9 +647,13 @@ appData.habits.forEach(h=>{
   if(!h.schedule || !h.schedule.mode) h.schedule = { mode:'daily', days:[], interval:2 };
   (h.actions||[]).forEach(a=>{ if(!a.addedOn) a.addedOn = h.startDate; });
 });
-let activeTab = appData.activeHabitId ? 'calendar' : (appData.habits.length ? 'calendar' : 'setup');
+let activeTab = 'home';
 let editingHabitId = null;
 let draftHabit = null;
+let setupModalOpen = false;
+let homeCarouselIndex = 0;
+let homeCarouselTimer = null;
+let homeCarouselMoved = false;
 let calendarCursor = new Date();
 let calendarView = 'month';
 let openDayModal = null;
@@ -748,9 +842,11 @@ function updateTopbarTitle(){
   const el = document.getElementById('topbarTitle');
   if(!el) return;
   if(activeTab==='setup'){ el.textContent = editingHabitId ? 'Edit habit' : 'New habit'; return; }
+  if(activeTab==='home'){ el.textContent = 'Atomic Ledger'; return; }
   const h = activeHabit();
   el.textContent = h ? h.name : 'Atomic Ledger';
 }
+function goHome(){ activeTab='home'; closeSidebar(); render(); }
 function selectHabit(id){ appData.activeHabitId = id; activeTab='calendar'; openDayModal=null; milestoneFormOpen=false; saveData(); render(); closeSidebar(); }
 function deleteHabit(id){
   const h = appData.habits.find(x=>x.id===id);
@@ -758,7 +854,7 @@ function deleteHabit(id){
   if(!confirm(`Delete "${h.name}" and all of its logged history? This can't be undone.`)) return;
   appData.habits = appData.habits.filter(x=>x.id!==id);
   if(appData.activeHabitId===id) appData.activeHabitId = appData.habits[0]?.id || null;
-  activeTab = appData.activeHabitId ? 'calendar' : 'setup';
+  activeTab = appData.activeHabitId ? 'calendar' : 'home';
   saveData(); render(); closeSidebar();
 }
 
@@ -767,14 +863,24 @@ function render(){
   renderSidebar();
   updateTopbarTitle();
   const c = document.getElementById('mainContainer');
+  if(activeTab==='home'){
+    c.innerHTML = renderHomeScreen();
+    bindHomeCarousel();
+    renderSetupModal();
+    return;
+  }
   if(activeTab==='setup'){
     c.innerHTML = renderSetupForm();
     bindSetupFormEvents();
+    renderSetupModal();
     return;
   }
   const h = activeHabit();
   if(!h){
-    c.innerHTML = renderEmptyState();
+    activeTab = 'home';
+    c.innerHTML = renderHomeScreen();
+    bindHomeCarousel();
+    renderSetupModal();
     return;
   }
   const streak = computeStreak(h);
@@ -788,9 +894,179 @@ function render(){
     ${activeTab==='calendar' ? renderCalendarTab(h, streak) : activeTab==='report' ? renderReportTab(h) : renderMilestonesTab(h)}
   `;
   renderModal();
+  renderSetupModal();
   if(activeTab==='report') requestAnimationFrame(()=> requestAnimationFrame(initReportAnimations));
 }
 function setTab(t){ activeTab=t; render(); }
+
+/* ============================= RENDER: HOME / BRANDING SCREEN ============================= */
+function renderHomeScreen(){
+  const habits = appData.habits;
+  const cardsHtml = habits.length
+    ? habits.map(h=>renderHomeHabitCard(h)).join('')
+    : renderHomeOnboardingCard();
+  const dotsHtml = habits.length > 1
+    ? habits.map((_,i)=>`<button class="carousel-dot ${i===homeCarouselIndex?'active':''}" onclick="goToCarouselSlide(${i})" aria-label="Go to habit ${i+1}"></button>`).join('')
+    : '';
+  return `
+  <section class="home-hero">
+    <div class="home-brand">
+      <img src="logo.jpeg" alt="Comet Webs logo" class="home-logo-img" onerror="this.style.display='none'; document.getElementById('homeLogoFallback').style.display='flex';">
+      <div class="home-logo-fallback" id="homeLogoFallback">☄️</div>
+      <div>
+        <div class="home-eyebrow">Habit Builder</div>
+        <h1 class="home-title">Atomic Ledger</h1>
+        <div class="home-tagline">Built by Comet Webs for your Growth.</div>
+      </div>
+    </div>
+    <div class="home-hero-actions">
+      <button class="btn btn-primary home-cta" onclick="openCreateHabitModal()">+ Create New Habit</button>
+      <a class="home-explore" href="https://cometwebs.dev" target="_blank" rel="noopener noreferrer">Explore more Comet Webs tools ↗</a>
+    </div>
+  </section>
+  <section class="home-carousel-section">
+    <div class="home-carousel-heading">
+      <h2>${habits.length ? "Today's habits" : 'Get started'}</h2>
+      ${habits.length>1 ? `<div class="carousel-arrows">
+        <button class="carousel-arrow" onclick="carouselPrev()" aria-label="Previous habit">‹</button>
+        <button class="carousel-arrow" onclick="carouselNext()" aria-label="Next habit">›</button>
+      </div>` : ''}
+    </div>
+    <div class="carousel-viewport" id="homeCarouselViewport">
+      <div class="carousel-track" id="homeCarouselTrack">${cardsHtml}</div>
+    </div>
+    ${dotsHtml ? `<div class="carousel-dots">${dotsHtml}</div>` : ''}
+  </section>
+  ${!habits.length ? renderFourLawsStrip() : ''}
+  `;
+}
+function renderHomeHabitCard(h){
+  const ds = todayStr();
+  const scheduled = isScheduledDay(h, ds);
+  let statusLabel, statusCls;
+  if(!scheduled){ statusLabel='Rest day'; statusCls='rest'; }
+  else if(isDayComplete(h, ds)){ statusLabel='Completed'; statusCls='complete'; }
+  else if(isDayPartial(h, ds)){ statusLabel='Partial'; statusCls='partial'; }
+  else{ statusLabel='Pending'; statusCls='pending'; }
+
+  const perf = dayPerfection(h, ds);
+  const pct = perf && perf.total ? Math.round((perf.completed/perf.total)*100) : null;
+
+  const streak = computeStreak(h);
+  const milestone = (h.milestones||[])[0];
+  let milestoneHtml;
+  if(milestone){
+    const prog = milestoneProgress(h, milestone);
+    const val = Math.min(prog.value, milestone.target);
+    const pctM = milestone.target ? Math.min(100, Math.round((val/milestone.target)*100)) : 0;
+    milestoneHtml = `<div class="home-card-milestone">
+      <div class="home-card-milestone-label">${prog.achievedOn?'🏆 ':''}${esc(milestone.label)}</div>
+      <div class="home-card-milestone-bar"><div class="home-card-milestone-fill" style="width:${pctM}%"></div></div>
+      <div class="home-card-milestone-meta">${val} / ${milestone.target}</div>
+    </div>`;
+  }else{
+    milestoneHtml = `<div class="home-card-milestone home-card-milestone-empty">🔗 ${streak.current}-day streak · <a onclick="event.stopPropagation(); selectHabit('${h.id}'); setTab('milestones');">set a milestone</a></div>`;
+  }
+
+  return `<div class="carousel-card" onclick="if(!homeCarouselMoved) selectHabit('${h.id}')">
+    <div class="home-card-top">
+      <div class="home-card-icon" style="background:${h.color}22;">${h.icon}</div>
+      <div class="home-card-name">${esc(h.name)}</div>
+      <span class="home-card-status ${statusCls}">${statusLabel}</span>
+    </div>
+    <div class="home-card-metrics">
+      <div class="home-card-metric"><div class="home-card-metric-num">${pct===null?'—':pct+'%'}</div><div class="home-card-metric-lbl">Today's perfection</div></div>
+      <div class="home-card-metric"><div class="home-card-metric-num">🔗 ${streak.current}</div><div class="home-card-metric-lbl">Day streak</div></div>
+    </div>
+    ${milestoneHtml}
+  </div>`;
+}
+function renderHomeOnboardingCard(){
+  return `<div class="carousel-card home-onboard-card">
+    <div class="home-onboard-icon">☄️</div>
+    <h3>Nothing tracked yet</h3>
+    <p>Pick one habit, define what "done" looks like, and start the chain. Small and consistent beats big and occasional.</p>
+    <button class="btn btn-primary" onclick="openCreateHabitModal()">Build your first habit</button>
+  </div>`;
+}
+function renderFourLawsStrip(){
+  return `<section class="home-laws">
+    <div class="home-laws-title">Built on the four laws of behavior change</div>
+    <div class="laws-grid">
+      <div class="law-card"><div class="num">01</div><h4>Make it obvious</h4><p>A clear cue tells you when to act.</p></div>
+      <div class="law-card"><div class="num">02</div><h4>Make it attractive</h4><p>Tie the habit to something you want.</p></div>
+      <div class="law-card"><div class="num">03</div><h4>Make it easy</h4><p>Shrink the first step until it's effortless.</p></div>
+      <div class="law-card"><div class="num">04</div><h4>Make it satisfying</h4><p>Log it. Watching the chain grow is the reward.</p></div>
+    </div>
+  </section>`;
+}
+
+/* ---------- Habit summary carousel: autoplay + drag/swipe + dots/arrows ---------- */
+function carouselCount(){ return appData.habits.length; }
+function applyCarouselTransform(animate){
+  const track = document.getElementById('homeCarouselTrack');
+  if(!track) return;
+  track.style.transition = animate ? 'transform .45s cubic-bezier(.4,0,.2,1)' : 'none';
+  track.style.transform = `translateX(${-homeCarouselIndex*100}%)`;
+}
+function updateCarouselDots(){
+  document.querySelectorAll('.carousel-dot').forEach((d,i)=> d.classList.toggle('active', i===homeCarouselIndex));
+}
+function goToCarouselSlide(i){
+  const n = carouselCount();
+  if(n<=0) return;
+  homeCarouselIndex = ((i % n) + n) % n;
+  applyCarouselTransform(true);
+  updateCarouselDots();
+  restartCarouselAutoplay();
+}
+function carouselNext(){ goToCarouselSlide(homeCarouselIndex+1); }
+function carouselPrev(){ goToCarouselSlide(homeCarouselIndex-1); }
+function startCarouselAutoplay(){
+  clearInterval(homeCarouselTimer);
+  if(carouselCount() <= 1) return;
+  homeCarouselTimer = setInterval(()=>{ goToCarouselSlide(homeCarouselIndex+1); }, 4800);
+}
+function stopCarouselAutoplay(){ clearInterval(homeCarouselTimer); }
+function restartCarouselAutoplay(){ startCarouselAutoplay(); }
+function bindHomeCarousel(){
+  const n = carouselCount();
+  homeCarouselIndex = n ? Math.min(homeCarouselIndex, n-1) : 0;
+  applyCarouselTransform(false);
+  updateCarouselDots();
+  const viewport = document.getElementById('homeCarouselViewport');
+  const track = document.getElementById('homeCarouselTrack');
+  if(!viewport || !track || n<=1) return;
+
+  startCarouselAutoplay();
+  viewport.addEventListener('mouseenter', stopCarouselAutoplay);
+  viewport.addEventListener('mouseleave', startCarouselAutoplay);
+
+  let startX=0, dx=0, dragging=false;
+  viewport.addEventListener('pointerdown', e=>{
+    dragging = true; homeCarouselMoved = false; startX = e.clientX; dx = 0;
+    stopCarouselAutoplay(); track.style.transition = 'none';
+    try{ viewport.setPointerCapture(e.pointerId); }catch(err){}
+  });
+  viewport.addEventListener('pointermove', e=>{
+    if(!dragging) return;
+    dx = e.clientX - startX;
+    if(Math.abs(dx) > 6) homeCarouselMoved = true;
+    const pct = (dx / viewport.getBoundingClientRect().width) * 100;
+    track.style.transform = `translateX(${-homeCarouselIndex*100 + pct}%)`;
+  });
+  const endDrag = ()=>{
+    if(!dragging) return;
+    dragging = false;
+    const threshold = viewport.getBoundingClientRect().width * 0.16;
+    if(dx < -threshold) goToCarouselSlide(homeCarouselIndex+1);
+    else if(dx > threshold) goToCarouselSlide(homeCarouselIndex-1);
+    else{ applyCarouselTransform(true); restartCarouselAutoplay(); }
+    setTimeout(()=>{ homeCarouselMoved = false; }, 50);
+  };
+  viewport.addEventListener('pointerup', endDrag);
+  viewport.addEventListener('pointercancel', endDrag);
+}
 
 function renderEmptyState(){
   return `<div class="empty-state">
@@ -825,6 +1101,27 @@ function renderHabitHeader(h){
 /* ============================= SETUP FORM ============================= */
 function startNewHabit(){ editingHabitId=null; draftHabit = { name:'', goal:'', cue:'', craving:'', ease:'', reward:'', color:COLORS[0], icon:ICONS[0], actions:[], startDate: todayStr(), milestones:[], schedule:{ mode:'daily', days:[], interval:2 } }; activeTab='setup'; render(); }
 function editHabit(id){ const h = appData.habits.find(x=>x.id===id); editingHabitId=id; draftHabit = JSON.parse(JSON.stringify(h)); if(!draftHabit.schedule) draftHabit.schedule = { mode:'daily', days:[], interval:2 }; activeTab='setup'; render(); }
+/* The Home screen's "+ Create New Habit" CTA opens the very same setup form,
+   but as a modal overlay on top of the dashboard instead of swapping the whole page. */
+function openCreateHabitModal(){
+  editingHabitId=null;
+  draftHabit = { name:'', goal:'', cue:'', craving:'', ease:'', reward:'', color:COLORS[0], icon:ICONS[0], actions:[], startDate: todayStr(), milestones:[], schedule:{ mode:'daily', days:[], interval:2 } };
+  setupModalOpen = true;
+  render();
+}
+function renderSetupModal(){
+  const root = document.getElementById('setupModalRoot');
+  if(!root) return;
+  if(!setupModalOpen || !draftHabit){ root.innerHTML=''; return; }
+  root.innerHTML = `<div class="overlay" onclick="if(event.target===this) cancelSetup()">
+    <div class="modal setup-modal">
+      <h3>${editingHabitId ? 'Edit habit' : 'Create a new habit'}</h3>
+      <div class="sub">${editingHabitId ? 'Update the details below.' : 'Define what "done" looks like — small and specific wins.'}</div>
+      ${renderSetupForm()}
+    </div>
+  </div>`;
+  bindSetupFormEvents();
+}
 function setScheduleMode(mode){
   draftHabit.schedule.mode = mode;
   document.getElementById('f-schedule-days-field').style.display = mode==='days' ? '' : 'none';
@@ -984,13 +1281,13 @@ function saveHabit(){
     appData.habits.push(h);
     appData.activeHabitId = h.id;
   }
-  editingHabitId = null; draftHabit = null; activeTab = 'calendar';
+  editingHabitId = null; draftHabit = null; setupModalOpen = false; activeTab = 'calendar';
   saveData(); render();
 }
 function cancelSetup(){
-  editingHabitId = null; draftHabit = null;
-  activeTab = appData.activeHabitId ? 'calendar' : (appData.habits.length ? 'calendar' : 'setup');
-  if(!appData.habits.length) activeTab='setup';
+  const wasModal = setupModalOpen;
+  editingHabitId = null; draftHabit = null; setupModalOpen = false;
+  activeTab = wasModal ? 'home' : (appData.activeHabitId ? 'calendar' : 'home');
   render();
 }
 
